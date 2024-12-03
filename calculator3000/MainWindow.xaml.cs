@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Data;
+using System.Globalization;
+using System.Windows;
 
 namespace calculator3000
 {
@@ -11,18 +13,25 @@ namespace calculator3000
         {
             InitializeComponent();
         }
-        static Double Eval(String expression)
+        //static Double Eval(String expression)
+        //{
+        //    System.Data.DataTable table = new System.Data.DataTable();
+        //    return Convert.ToDouble(table.Compute(expression, String.Empty));
+        //}
+        public static string Eval(string expression)
         {
-            System.Data.DataTable table = new System.Data.DataTable();
-            return Convert.ToDouble(table.Compute(expression, String.Empty));
+            return Convert.ToDouble(new DataTable().Compute(expression, string.Empty)).ToString("F2", CultureInfo.InvariantCulture);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (sender.ToString()[^1].ToString() == "+" || sender.ToString()[^1].ToString() == "-" || sender.ToString()[^1].ToString() == "x" || sender.ToString()[^1].ToString() == "/")
+            if (sender.ToString()[^1].ToString() == "+" || sender.ToString()[^1].ToString() == "-" || sender.ToString()[^1].ToString() == "*" || sender.ToString()[^1].ToString() == "/")
             {
-                _outputText.Text += " ";
-                _outputText.Text += sender.ToString()[^1].ToString();
-                _outputText.Text += " ";
+                if (_outputText.Text[^1].ToString() != " ")
+                {
+                    _outputText.Text += " ";
+                    _outputText.Text += sender.ToString()[^1].ToString();
+                    _outputText.Text += " ";
+                }
             }
             else
             {
@@ -58,6 +67,20 @@ namespace calculator3000
         {
             _outputText.Text = "";
             CheckIfnotEmpty();
+        }
+        private void AnswerEqualsTo(object sender, RoutedEventArgs e)
+        {
+            if (_outputText.Text[^1].ToString() != " ")
+            {
+                _outputText.Text = String.Format("{0:0.00}", Eval(_outputText.Text).ToString());
+            }
+        }
+        private void DotClick(object sender, RoutedEventArgs e)
+        {
+            if (_outputText.Text[^1].ToString() != " " && _outputText.Text[^1].ToString() != ".")
+            {
+                _outputText.Text += ".";
+            }
         }
         private void CheckIfnotEmpty()
         {

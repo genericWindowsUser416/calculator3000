@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculator3000"
         mc:Ignorable="d"
-        Title="Calculator3000" Height="450" Width="500">
+        Title="Calculator3000" Height="400" Width="400">
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Height="125" Width="469" Margin="21,0,0,0">
             <TextBlock x:Name="_outputText" TextWrapping="Wrap" FontSize="24" Text="0"/>
@@ -32,8 +32,8 @@
             <Button x:Name="_7btn" Content="7" Grid.Row="0" Grid.Column="0" Click="Button_Click" FontSize="36"/>
             <Button x:Name="_8btn" Content="8" Grid.Row="0" Grid.Column="1" Click="Button_Click" FontSize="36"/>
             <Button x:Name="_9btn" Content="9" Grid.Row="0" Grid.Column="2" Click="Button_Click" FontSize="36"/>
-            <Button x:Name="_delbtn" Content="DEL" Grid.Row="0" Grid.Column="4" Click="DeleteOneCharacter" FontSize="36" Grid.ColumnSpan="2"/>
-            <Button x:Name="_acbtn" Content="AC" Grid.Row="0" Grid.Column="6" Click="DeleteAllCharacters" FontSize="36"/>
+            <Button x:Name="_delbtn" Content="DEL" Grid.Row="0" Grid.Column="4" Click="DeleteOneCharacter" FontSize="36" Grid.ColumnSpan="2" Cursor="Cross"/>
+            <Button x:Name="_acbtn" Content="AC" Grid.Row="0" Grid.Column="6" Click="DeleteAllCharacters" FontSize="36" Cursor="Cross"/>
 
             <Button x:Name="_4btn" Content="4" Grid.Row="1" Grid.Column="0" Click="Button_Click" FontSize="36"/>
             <Button x:Name="_5btn" Content="5" Grid.Row="1" Grid.Column="1" Click="Button_Click" FontSize="36"/>
@@ -44,11 +44,12 @@
             <Button x:Name="_3btn" Content="3" Grid.Row="2" Grid.Column="2" Click="Button_Click" FontSize="36"/>
 
             <Button x:Name="_0btn" Content="0" Grid.Row="3" Grid.Column="0" Click="Button_Click" FontSize="36"/>
-            <Button x:Name="_xbtn" Content="x" Grid.Row="1" Grid.Column="4" Click="Button_Click" FontSize="36"/>
+            <Button x:Name="_xbtn" Content="*" Grid.Row="1" Grid.Column="4" Click="Button_Click" FontSize="36"/>
             <Button x:Name="_multiplybtn" Content="+" Grid.Row="2" Grid.Column="4" Click="Button_Click" FontSize="36"/>
             <Button x:Name="_minusbtn" Content="-" Grid.Row="2" Grid.Column="5" Click="Button_Click" FontSize="36"/>
             <Button x:Name="_dividebtn" Content="/" Grid.Row="1" Grid.Column="5" Click="Button_Click" FontSize="36"/>
-            <Button x:Name="_equalsbtn" Content="=" Grid.Row="2" Grid.Column="4" Click="Button_Click" FontSize="36" Margin="0,49,0,1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Button x:Name="_equalsbtn" Content="=" Grid.Row="2" Grid.Column="4" Click="AnswerEqualsTo" FontSize="36" Margin="0,49,0,1" Grid.RowSpan="2" Grid.ColumnSpan="2" Cursor="UpArrow"/>
+            <Button x:Name="_dotbtn" Content="." Grid.Row="3" Grid.Column="1" Click="DotClick" FontSize="36"/>
 
         </Grid>
     </Grid>
