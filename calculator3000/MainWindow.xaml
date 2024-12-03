@@ -11,6 +11,8 @@
             <TextBlock x:Name="_outputText" TextWrapping="Wrap" FontSize="48" Text="0"/>
             <TextBlock x:Name="_outputText_Copy" TextWrapping="Wrap" FontSize="48" Text="|"/>
         </StackPanel>
-        <Button x:Name="_0btn" Content="0" HorizontalAlignment="Left" Margin="50,173,0,0" VerticalAlignment="Top" Height="115" Width="131" Click="Button0_Click" FontSize="48"/>
+        <Button x:Name="_0btn" Content="0" HorizontalAlignment="Left" Margin="50,346,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button0_Click" FontSize="36"/>
+        <Button x:Name="_1btn" Content="1" HorizontalAlignment="Left" Margin="50,257,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button0_Click" FontSize="36"/>
+        <Button x:Name="_2btn" Content="2" HorizontalAlignment="Left" Margin="130,257,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button0_Click" FontSize="36"/>
     </Grid>
 </Window>

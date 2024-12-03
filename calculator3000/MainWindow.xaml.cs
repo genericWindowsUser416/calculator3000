@@ -23,7 +23,10 @@ namespace calculator3000
 
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
-            _outputText.Text = _outputText.Text + "0";
+            if(_outputText.Text != "0")
+            {
+                _outputText.Text = _outputText.Text + "0";
+            }
         }
     }
 }

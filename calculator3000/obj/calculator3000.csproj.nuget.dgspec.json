@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator3000\\calculator3000.csproj": {}
+    "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator\\calculator3000\\calculator3000.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator3000\\calculator3000.csproj": {
+    "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator\\calculator3000\\calculator3000.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator3000\\calculator3000.csproj",
+        "projectUniqueName": "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator\\calculator3000\\calculator3000.csproj",
         "projectName": "calculator3000",
-        "projectPath": "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator3000\\calculator3000.csproj",
+        "projectPath": "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator\\calculator3000\\calculator3000.csproj",
         "packagesPath": "C:\\Users\\ALEX2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator3000\\obj\\",
+        "outputPath": "C:\\Users\\ALEX2\\source\\repos\\calculator3000\\calculator\\calculator3000\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALEX2\\AppData\\Roaming\\NuGet\\NuGet.Config",
