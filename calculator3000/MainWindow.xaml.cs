@@ -13,6 +13,7 @@ namespace calculator3000
         {
             InitializeComponent();
         }
+
         public static string Eval(string expression)
         {
             string result;
@@ -30,6 +31,7 @@ namespace calculator3000
             }
             return result;
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (sender.ToString()[^1].ToString() == "+" || sender.ToString()[^1].ToString() == "-" || sender.ToString()[^1].ToString() == "*" || sender.ToString()[^1].ToString() == "/")
@@ -54,6 +56,7 @@ namespace calculator3000
             }
             Blink();
         }
+
         private void Blink()
         {
             if (_chertocka.Text == "|")
@@ -65,16 +68,19 @@ namespace calculator3000
                 _chertocka.Text = "|";
             }
         }
+
         private void DeleteOneCharacter(object sender, RoutedEventArgs e)
         {
             _outputText.Text = _outputText.Text.Remove(_outputText.Text.Length - 1);
             CheckIfnotEmpty();
         }
+
         private void DeleteAllCharacters(object sender, RoutedEventArgs e)
         {
             _outputText.Text = "";
             CheckIfnotEmpty();
         }
+
         private void AnswerEqualsTo(object sender, RoutedEventArgs e)
         {
             if (_outputText.Text[^1].ToString() != " ")
@@ -82,6 +88,7 @@ namespace calculator3000
                 _outputText.Text = String.Format("{0:0.00}", Eval(_outputText.Text).ToString());
             }
         }
+
         private void CheckIfnotEmpty()
         {
             if (_outputText.Text == "")
