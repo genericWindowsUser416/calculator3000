@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculator3000"
         mc:Ignorable="d"
-        Title="Calculator3000" Height="400" Width="400">
+        Title="Calculator3000" Height="400" Width="400"
+        MinHeight="400" MinWidth="400" >
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Height="125" Width="469" Margin="21,0,0,0">
-            <ScrollViewer Width="300" Height="50" VerticalScrollBarVisibility="Auto">
-                <TextBlock x:Name="_outputText" TextWrapping="Wrap" FontSize="24" Text="0" />
-            </ScrollViewer>
-            <TextBlock x:Name="_chertocka" TextWrapping="Wrap" FontSize="24" Text="|" />
-        </StackPanel>
+<StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Height="125" Width="469" Margin="21,0,0,0">
+    <ScrollViewer Width="300" Height="120" VerticalScrollBarVisibility="Auto">
+        <TextBlock x:Name="_outputText" TextWrapping="Wrap" FontSize="24" Text="0" />
+    </ScrollViewer>
+    <TextBlock x:Name="_chertocka" TextWrapping="Wrap" FontSize="24" Text="" Height="45" Width="13" />
+</StackPanel>
         <Grid Margin="7,136,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
