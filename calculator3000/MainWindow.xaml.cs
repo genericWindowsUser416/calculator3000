@@ -13,14 +13,22 @@ namespace calculator3000
         {
             InitializeComponent();
         }
-        //static Double Eval(String expression)
-        //{
-        //    System.Data.DataTable table = new System.Data.DataTable();
-        //    return Convert.ToDouble(table.Compute(expression, String.Empty));
-        //}
         public static string Eval(string expression)
         {
-            return Convert.ToDouble(new DataTable().Compute(expression, string.Empty)).ToString("F2", CultureInfo.InvariantCulture);
+            string result;
+            try 
+            {
+                result = Convert.ToDouble(new DataTable().Compute(expression, string.Empty)).ToString("F2", CultureInfo.InvariantCulture);
+            }
+            catch 
+            {
+                result = "0";
+            }
+            if (result == "Infinity") 
+            {
+                result = "11010000101111011101000010110101";
+            }
+            return result;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -73,13 +81,6 @@ namespace calculator3000
             if (_outputText.Text[^1].ToString() != " ")
             {
                 _outputText.Text = String.Format("{0:0.00}", Eval(_outputText.Text).ToString());
-            }
-        }
-        private void DotClick(object sender, RoutedEventArgs e)
-        {
-            if (_outputText.Text[^1].ToString() != " " && _outputText.Text[^1].ToString() != ".")
-            {
-                _outputText.Text += ".";
             }
         }
         private void CheckIfnotEmpty()
