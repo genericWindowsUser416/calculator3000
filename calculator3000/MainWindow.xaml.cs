@@ -24,7 +24,7 @@ namespace calculator3000
             {
                 result = "0";
             }
-            if (result == "Infinity") 
+            if (result == "Infinity" || result == "NaN") 
             {
                 result = "11010000101111011101000010110101";
             }
@@ -53,7 +53,6 @@ namespace calculator3000
                 }
             }
             Blink();
-
         }
         private void Blink()
         {
